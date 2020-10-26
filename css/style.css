@@ -1,12 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
-.title {
-  font-family: 'Open Sans';
+body {
+  background-color: #0a1f44;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 50px;
 }
 
-button, input {
+body .title {
+  font-family: 'Open Sans';
+  font-size: 3.5rem;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+body form button, body form input {
   border: none;
   background: none;
   outline: none;
+  color: #FFFFFF;
+}
+
+body form input {
+  font-size: 1.5rem;
+  border-bottom: 3px solid;
+  height: 35px;
+  padding: 5px 10px 5px 0px;
+}
+
+body form button {
+  font-size: 0.9rem;
+  font-weight: bolder;
+  letter-spacing: 0.07em;
+  padding: 17px 19px;
+  margin-left: 25px;
+  border-radius: 2px;
+  background: #ff1e42;
+}
+
+body ::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+body :-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+body ::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+body ::placeholder {
+  color: #FFFFFF;
 }
 
 ul {
