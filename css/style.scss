@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+$colors: (
+    primary: #005DFF,
+    primary-light: lighten(#005DFF, 40%),
+    primary-dark: darken(#005DFF, 40%),
+    accent: #FFF6BB,
+    white: #FFFFFF 
+);
+
+$padding: 15px;
+$borders: 15px;
+
+.title {
+  font-family: 'Open Sans';
+}
+
+button, input {
+  border: none;
+  background: none;
+  outline: none;
+}
+ 
+ul {
+  list-style: none;
+}
+ 
