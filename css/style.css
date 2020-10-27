@@ -110,9 +110,57 @@ body ::placeholder {
   list-style: none;
   display: -ms-grid;
   display: grid;
+  position: relative;
   grid-gap: 32px 20px;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
+  padding: 40px 10%;
+  border-radius: 20px;
+  background: #FFFFFF;
+  color: #0a1f44;
+}
+
+.city-display .cities:after {
+  content: "";
+  width: 90%;
+  height: 50px;
+  position: absolute;
+  bottom: -12px;
+  left: 5%;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 20px;
+  background: #FFFFFF;
+}
+
+.city-display .cities figcaption {
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.city-display .cities .city-temperature {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--text_dark);
+}
+
+.city-display .cities .city sup {
+  font-size: 0.5em;
+}
+
+.city-display .cities .city-name sup {
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: #0a1f44;
+  background: #d10021;
+}
+
+.city-display .cities .city-icon {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
 }
 
 @media (max-width: 700px) {

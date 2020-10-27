@@ -108,8 +108,56 @@ body {
   .cities {
     list-style: none;
     display: grid;
+    position: relative;
     grid-gap: 32px 20px;
     grid-template-columns: repeat(4, 1fr);
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: color(text);
+    color: color(primary);
+
+    &:after {
+      content: "";
+      width: 90%;
+      height: 50px;
+      position: absolute;
+      bottom: -12px;
+      left: 5%;
+      z-index: -1;
+      opacity: 0.3;
+      border-radius: 20px;
+      background: color(text);
+    }
+
+    figcaption {
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+     
+    .city-temperature {
+      font-size: 5rem;
+      font-weight: bold;
+      margin-top: 10px;
+      color: var(--text_dark);
+    }
+     
+    .city sup {
+      font-size: 0.5em;
+    }
+     
+    .city-name sup {
+      padding: 0.2em 0.6em;
+      border-radius: 30px;
+      color: color(primary);
+      background: color(secondary-dark);
+    }
+     
+    .city-icon {
+      margin-top: 10px;
+      width: 100px;
+      height: 100px;
+    }
 
     @include medium {
       grid-template-columns: repeat(2, 1fr);
