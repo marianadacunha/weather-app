@@ -38,6 +38,13 @@ body {
     color: color(text);
   }
 
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }  
+
   form {
     @include desktop {
       flex-direction: column;

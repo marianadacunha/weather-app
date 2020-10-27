@@ -16,6 +16,13 @@ body .title {
   color: #FFFFFF;
 }
 
+body .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 @media (max-width: 840px) {
   body form {
     -webkit-box-orient: vertical;

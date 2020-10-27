@@ -1,18 +1,17 @@
-const form = document.querySelector(".city-search form");
-const input = document.querySelector(".city-search input");
-const message = document.querySelector(".city-search .msg");
-const list = document.querySelector(".city-display .cities");
+const form = document.querySelector(".city-search .container form");
+const input = document.querySelector(".city-search .container input");
+const message = document.querySelector(".city-search .container .msg");
+const list = document.querySelector(".city-display .container .cities");
 
 form.addEventListener("submit", e => {
     e.preventDefault(); // Prevents reloading the page
     const inputValue = input.value; // Grabs the value from the search field
-
+    const listItems = list.querySelectorAll(".city-display .container .city");
     const apiKey = "0c829e5b400bfad68fe2d1d7f0b2e066";
-    const inputValue = input.value; // The city the user wants to check
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${API key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`;
 
     fetch(url)
-        .then(response => response.json()) // Turning the HTTP response into JSON format
+        .then(response => response.json()) // Turning the HTTP response into a JSON format
         .then(data => { // Creating the associated item on the HTML file
             const {
                 main,
