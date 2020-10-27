@@ -112,12 +112,8 @@ body {
 .city-display {
   margin: 50px 0 20px;
 
-  .cities {
-    list-style: none;
-    display: grid;
+  .city {
     position: relative;
-    grid-gap: 32px 20px;
-    grid-template-columns: repeat(4, 1fr);
     padding: 40px 10%;
     border-radius: 20px;
     background: color(text);
@@ -135,6 +131,13 @@ body {
       border-radius: 20px;
       background: color(text);
     }
+  }
+  
+  .cities {
+    list-style: none;
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4, 1fr);
 
     span {
       font-family: 'Open Sans';

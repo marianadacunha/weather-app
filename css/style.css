@@ -113,21 +113,15 @@ body ::placeholder {
   margin: 50px 0 20px;
 }
 
-.city-display .cities {
-  list-style: none;
-  display: -ms-grid;
-  display: grid;
+.city-display .city {
   position: relative;
-  grid-gap: 32px 20px;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
   padding: 40px 10%;
   border-radius: 20px;
   background: #FFFFFF;
   color: #0a1f44;
 }
 
-.city-display .cities:after {
+.city-display .city:after {
   content: "";
   width: 90%;
   height: 50px;
@@ -138,6 +132,15 @@ body ::placeholder {
   opacity: 0.3;
   border-radius: 20px;
   background: #FFFFFF;
+}
+
+.city-display .cities {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 32px 20px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
 .city-display .cities span {
