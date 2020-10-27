@@ -136,13 +136,19 @@ body {
       background: color(text);
     }
 
+    span {
+      font-family: 'Open Sans';
+    }
+
     figcaption {
+      font-family: 'Open Sans';
       margin-top: 10px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
      
     .city-temperature {
+      font-family: 'Open Sans';
       font-size: 5rem;
       font-weight: bold;
       margin-top: 10px;
@@ -150,10 +156,12 @@ body {
     }
      
     .city sup {
+      font-family: 'Open Sans';
       font-size: 0.5em;
     }
      
     .city-name sup {
+      font-family: 'Open Sans';
       padding: 0.2em 0.6em;
       border-radius: 30px;
       color: color(primary);

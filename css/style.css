@@ -140,13 +140,19 @@ body ::placeholder {
   background: #FFFFFF;
 }
 
+.city-display .cities span {
+  font-family: 'Open Sans';
+}
+
 .city-display .cities figcaption {
+  font-family: 'Open Sans';
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .city-display .cities .city-temperature {
+  font-family: 'Open Sans';
   font-size: 5rem;
   font-weight: bold;
   margin-top: 10px;
@@ -154,10 +160,12 @@ body ::placeholder {
 }
 
 .city-display .cities .city sup {
+  font-family: 'Open Sans';
   font-size: 0.5em;
 }
 
 .city-display .cities .city-name sup {
+  font-family: 'Open Sans';
   padding: 0.2em 0.6em;
   border-radius: 30px;
   color: #0a1f44;
