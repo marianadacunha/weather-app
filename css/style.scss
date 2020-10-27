@@ -43,6 +43,11 @@ body {
       margin-left: 25px;
       border-radius: 2px;
       background: color(secondary);
+      transition: background 0.15s ease-in-out;
+
+      &:hover {
+        background: color(secondary-dark);
+      }
     }
   }
     

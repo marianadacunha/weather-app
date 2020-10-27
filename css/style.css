@@ -36,6 +36,12 @@ body form button {
   margin-left: 25px;
   border-radius: 2px;
   background: #ff1e42;
+  -webkit-transition: background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
+}
+
+body form button:hover {
+  background: #d10021;
 }
 
 body ::-webkit-input-placeholder {
