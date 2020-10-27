@@ -102,7 +102,30 @@ body ::placeholder {
   color: #FFFFFF;
 }
 
-ul {
+.city-display {
+  margin: 50px 0 20px;
+}
+
+.city-display .cities {
   list-style: none;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 32px 20px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 700px) {
+  .city-display .cities {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .city-display .cities {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,6 +12,18 @@
   }
 }
 
+@mixin medium {
+  @media(max-width: #{$medium}) {
+      @content;
+  }
+}
+
+@mixin small {
+  @media(max-width: #{$small}) {
+      @content;
+  }
+}
+
 body {
   background-color: color(primary);
   max-width: 100%;
@@ -28,8 +40,8 @@ body {
 
   form {
     @include desktop {
-        flex-direction: column;
-      }
+      flex-direction: column;
+    }
 
     button,
     input {
@@ -90,6 +102,21 @@ body {
   }
 }
 
-ul {
-  list-style: none;
+.city-display {
+  margin: 50px 0 20px;
+
+  .cities {
+    list-style: none;
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include medium {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include small {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
