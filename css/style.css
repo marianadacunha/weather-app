@@ -45,11 +45,6 @@ body form {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-}
-
-@media (max-width: 770px) {
-  body form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -73,21 +68,9 @@ body form input {
 @media (max-width: 840px) {
   body form button,
   body form input {
-    width: 100%;
-  }
-}
-
-@media (max-width: 770px) {
-  body form button,
-  body form input {
-    max-width: 80%;
-  }
-}
-
-@media (max-width: 500px) {
-  body form button,
-  body form input {
-    max-width: 80%;
+    width: 80%;
+    display: block;
+    margin: auto;
   }
 }
 
@@ -98,7 +81,7 @@ body form input {
   padding: 5px 190px 5px 10px;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 840px) {
   body form input {
     padding: 5px 0px 15px 0px;
   }
@@ -127,20 +110,16 @@ body form button:hover {
 }
 
 body form .message {
-  position: absolute;
+  position: static;
+  min-height: 0;
+  margin-top: 10px;
   bottom: -40px;
   left: 0;
-  max-width: 450px;
-  min-height: 40px;
-}
-
-@media (max-width: 840px) {
-  body form .message {
-    position: static;
-    max-width: none;
-    min-height: 0;
-    margin-top: 10px;
-  }
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
 }
 
 body ::-webkit-input-placeholder {
@@ -164,7 +143,7 @@ body ::placeholder {
 }
 
 body .city-display {
-  margin: 50px 0 20px;
+  margin: 0px 50px 0px 50px;
 }
 
 body .city-display .city {
@@ -202,9 +181,26 @@ body .city-display .cities span {
   font-family: 'Open Sans';
 }
 
+body .city-display .cities figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+}
+
 body .city-display .cities figcaption {
   font-family: 'Open Sans';
-  margin-top: 10px;
+  margin: 10px 0px 10px 0px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   text-align: center;
@@ -213,15 +209,14 @@ body .city-display .cities figcaption {
 body .city-display .cities .city-temperature {
   font-family: 'Open Sans';
   font-size: 5rem;
-  font-weight: bold;
+  font-weight: bolder;
   margin-top: 10px;
-  color: var(--text_dark);
 }
 
 body .city-display .cities .city sup {
   font-family: 'Open Sans';
   font-size: 0.5em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 body .city-display .cities .city-name sup {
@@ -233,9 +228,16 @@ body .city-display .cities .city-name sup {
 }
 
 body .city-display .cities .city-icon {
-  margin-top: 10px;
+  margin-bottom: 10px;
   width: 100px;
   height: 100px;
+}
+
+@media (max-width: 1005px) {
+  body .city-display .cities {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 770px) {

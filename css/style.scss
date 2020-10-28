@@ -12,6 +12,12 @@
   }
 }
 
+@mixin big {
+  @media(max-width: #{$big}) {
+      @content;
+  }
+}
+
 @mixin medium {
   @media(max-width: #{$medium}) {
       @content;
@@ -56,9 +62,6 @@ body {
 
     @include desktop {
       flex-direction: column;
-    }
-    
-    @include medium {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -72,15 +75,9 @@ body {
       color: color(text);
 
       @include desktop {
-        width: 100%;
-      }
-
-      @include medium {
-        max-width: 80%;
-      }
-
-      @include small {
-        max-width: 80%;
+        width: 80%;
+        display: block;
+        margin: auto;
       }
     }
 
@@ -90,7 +87,7 @@ body {
       height: 35px;
       padding: 5px 190px 5px 10px;
 
-      @include medium {
+      @include desktop {
         padding: 5px 0px 15px 0px;
       }
     }
@@ -115,18 +112,16 @@ body {
     }
 
     .message {
-      position: absolute;
+      position: static;
+      min-height: 0;
+      margin-top: 10px;
       bottom: -40px;
       left: 0;
-      max-width: 450px;
-      min-height: 40px;
-
-      @include desktop {
-        position: static;
-        max-width: none;
-        min-height: 0;
-        margin-top: 10px;
-      }
+      font-family: 'Open Sans';
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: color(text);
     }
   }
 
@@ -136,7 +131,7 @@ body {
   }
 
   .city-display {
-    margin: 50px 0 20px;
+    margin: 0px 50px 0px 50px;
   
     .city {
       position: relative;
@@ -170,9 +165,17 @@ body {
         font-family: 'Open Sans';
       }
   
+      figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+      }
+
       figcaption {
         font-family: 'Open Sans';
-        margin-top: 10px;
+        margin: 10px 0px 10px 0px;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         text-align: center;
@@ -181,15 +184,14 @@ body {
       .city-temperature {
         font-family: 'Open Sans';
         font-size: 5rem;
-        font-weight: bold;
+        font-weight: bolder;
         margin-top: 10px;
-        color: var(--text_dark);
       }
        
       .city sup {
         font-family: 'Open Sans';
         font-size: 0.5em;
-        font-weight: 600;
+        font-weight: 700;
       }
        
       .city-name sup {
@@ -201,11 +203,15 @@ body {
       }
        
       .city-icon {
-        margin-top: 10px;
+        margin-bottom: 10px;
         width: 100px;
         height: 100px;
       }
   
+      @include big {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
       @include medium {
         grid-template-columns: repeat(2, 1fr);
       }
