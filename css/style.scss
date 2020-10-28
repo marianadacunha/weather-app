@@ -112,16 +112,20 @@ body {
     }
 
     .message {
-      position: static;
-      min-height: 0;
-      margin-top: 10px;
-      bottom: -40px;
-      left: 0;
+      position: absolute;
+      left: 315px;
+      bottom: 965px;
+      margin-top: 0px;
       font-family: 'Open Sans';
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: 0.03em;
-      color: color(text);
+      color: color(secondary);
+
+      @include desktop {
+        position: static;
+        margin-top: 10px;
+      }
     }
   }
 

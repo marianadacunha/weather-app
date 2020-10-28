@@ -110,16 +110,22 @@ body form button:hover {
 }
 
 body form .message {
-  position: static;
-  min-height: 0;
-  margin-top: 10px;
-  bottom: -40px;
-  left: 0;
+  position: absolute;
+  left: 315px;
+  bottom: 965px;
+  margin-top: 0px;
   font-family: 'Open Sans';
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  color: #FFFFFF;
+  color: #ff5cf3;
+}
+
+@media (max-width: 840px) {
+  body form .message {
+    position: static;
+    margin-top: 10px;
+  }
 }
 
 body ::-webkit-input-placeholder {
