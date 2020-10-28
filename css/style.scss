@@ -5,7 +5,12 @@
   @return map-get($colors, $color-name);
 }
 
-/* Making a mixin for the media */
+@mixin flex($align) {
+  display: flex;
+  align-items: $align;
+  justify-content: $align;
+}
+
 @mixin desktop {
   @media(max-width: #{$desktop}) {
     @content;
@@ -55,16 +60,12 @@ body {
   }  
 
   form {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    @include flex(center);
     margin: 70px 0px 50px 0px;
 
     @include desktop {
       flex-direction: column;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex(center);
     }
 
     button,
@@ -171,9 +172,7 @@ body {
       }
   
       figure {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(center);
         flex-direction: column;
         margin: 0;
       }
