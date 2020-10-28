@@ -36,6 +36,10 @@ body {
     letter-spacing: 0.03em;
     color: color(text);
     text-align: center;
+
+    @include small {
+      padding: 0px 25px 0px 25px;
+    }
   }
 
   .container {
@@ -53,6 +57,12 @@ body {
     @include desktop {
       flex-direction: column;
     }
+    
+    @include medium {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     button,
     input {
@@ -66,11 +76,11 @@ body {
       }
 
       @include medium {
-        max-width: 85%;
+        max-width: 80%;
       }
 
       @include small {
-        max-width: 90%;
+        max-width: 80%;
       }
     }
 
@@ -79,6 +89,10 @@ body {
       border-bottom: 3px solid;
       height: 35px;
       padding: 5px 190px 5px 10px;
+
+      @include medium {
+        padding: 5px 0px 15px 0px;
+      }
     }
 
     button {

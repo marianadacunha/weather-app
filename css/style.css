@@ -16,6 +16,12 @@ body .title {
   text-align: center;
 }
 
+@media (max-width: 500px) {
+  body .title {
+    padding: 0px 25px 0px 25px;
+  }
+}
+
 body .container {
   width: 100%;
   max-width: 1200px;
@@ -42,6 +48,20 @@ body form {
   }
 }
 
+@media (max-width: 770px) {
+  body form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 body form button,
 body form input {
   border: none;
@@ -57,17 +77,17 @@ body form input {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 770px) {
   body form button,
   body form input {
-    max-width: 85%;
+    max-width: 80%;
   }
 }
 
 @media (max-width: 500px) {
   body form button,
   body form input {
-    max-width: 90%;
+    max-width: 80%;
   }
 }
 
@@ -76,6 +96,12 @@ body form input {
   border-bottom: 3px solid;
   height: 35px;
   padding: 5px 190px 5px 10px;
+}
+
+@media (max-width: 770px) {
+  body form input {
+    padding: 5px 0px 15px 0px;
+  }
 }
 
 body form button {
@@ -212,7 +238,7 @@ body .city-display .cities .city-icon {
   height: 100px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 770px) {
   body .city-display .cities {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
