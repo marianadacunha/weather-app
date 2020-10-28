@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-@import "variables";]
-@import "mixins";
+@import "variables";
+@import "mixin";
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
@@ -86,7 +86,7 @@ body {
     .message {
       position: absolute;
       text-align: center;
-      bottom: 965px;
+      padding-top: 100px;
       margin-top: 0px;
       font-family: 'Open Sans';
       font-size: 1rem;
@@ -97,6 +97,7 @@ body {
       @include desktop {
         position: static;
         margin-top: 10px;
+        padding-top: 0px;
       }
     }
   }
