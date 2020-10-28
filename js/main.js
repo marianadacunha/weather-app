@@ -1,6 +1,6 @@
 const form = document.querySelector(".city-search .container form");
 const input = document.querySelector(".city-search .container input");
-const message = document.querySelector(".city-search .container .msg");
+const message = document.querySelector(".city-search .container .message");
 const list = document.querySelector(".city-display .container .cities");
 
 form.addEventListener("submit", e => {
@@ -44,8 +44,7 @@ form.addEventListener("submit", e => {
             message.textContent = "Sorry, we couldn't find this city";
         });
 
-    // Clearing the search field
-    message.textContent = "";
+    message.textContent = ""; // Clearing the search field
     form.reset();
     input.focus();
-});
+  });
