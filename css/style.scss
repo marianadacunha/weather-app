@@ -36,16 +36,21 @@ body {
     font-size: 3.5rem;
     letter-spacing: 0.03em;
     color: color(text);
+    text-align: center;
   }
 
   .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
   }  
 
   form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 70px 0px 50px 0px;
+
     @include desktop {
       flex-direction: column;
     }
@@ -66,7 +71,7 @@ body {
       font-size: 1.5rem;
       border-bottom: 3px solid;
       height: 35px;
-      padding: 5px 10px 5px 0px;
+      padding: 5px 190px 5px 10px;
     }
 
     button {
@@ -77,7 +82,7 @@ body {
       margin-left: 25px;
       border-radius: 2px;
       background: color(secondary);
-      transition: background 0.15s ease-in-out;
+      transition: 0.15s ease-in-out;
 
       &:hover {
         background: color(secondary-dark);
@@ -106,6 +111,7 @@ body {
 
   ::placeholder {
     color: color(text);
+    opacity: 0.8;
   }
 }
 
@@ -114,10 +120,11 @@ body {
 
   .city {
     position: relative;
-    padding: 40px 10%;
+    padding: 20px 10%;
     border-radius: 20px;
     background: color(text);
     color: color(primary);
+    text-transform: uppercase;
 
     &:after {
       content: "";
@@ -148,6 +155,7 @@ body {
       margin-top: 10px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      text-align: center;
     }
      
     .city-temperature {
@@ -161,12 +169,13 @@ body {
     .city sup {
       font-family: 'Open Sans';
       font-size: 0.5em;
+      font-weight: 600;
     }
      
     .city-name sup {
       font-family: 'Open Sans';
-      padding: 0.2em 0.6em;
-      border-radius: 30px;
+      padding: 0.3em 0.6em;
+      border-radius: 20px;
       color: color(primary);
       background: color(secondary-dark);
     }
