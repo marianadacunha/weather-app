@@ -20,7 +20,7 @@ form.addEventListener("submit", e => {
                 weather
             } = data;
 
-            const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]}@2x.png`;
+            const icon = `img/${weather[0]["icon"]}.png`;
             const li = document.createElement("li");
 
             li.classList.add("city");
