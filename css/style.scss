@@ -1,38 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-@import "variables";
+@import "variables";]
+@import "mixins";
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
-}
-
-@mixin flex($align) {
-  display: flex;
-  align-items: $align;
-  justify-content: $align;
-}
-
-@mixin desktop {
-  @media(max-width: #{$desktop}) {
-    @content;
-  }
-}
-
-@mixin big {
-  @media(max-width: #{$big}) {
-      @content;
-  }
-}
-
-@mixin medium {
-  @media(max-width: #{$medium}) {
-      @content;
-  }
-}
-
-@mixin small {
-  @media(max-width: #{$small}) {
-      @content;
-  }
 }
 
 body {
