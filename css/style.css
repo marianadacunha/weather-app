@@ -6,7 +6,6 @@ body {
   max-width: 100%;
   max-height: 100%;
   margin: 0;
-  padding: 50px;
 }
 
 body .title {
@@ -55,6 +54,20 @@ body form input {
   body form button,
   body form input {
     width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  body form button,
+  body form input {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 500px) {
+  body form button,
+  body form input {
+    max-width: 90%;
   }
 }
 
@@ -124,11 +137,11 @@ body ::placeholder {
   opacity: 0.8;
 }
 
-.city-display {
+body .city-display {
   margin: 50px 0 20px;
 }
 
-.city-display .city {
+body .city-display .city {
   position: relative;
   padding: 20px 10%;
   border-radius: 20px;
@@ -137,7 +150,7 @@ body ::placeholder {
   text-transform: uppercase;
 }
 
-.city-display .city:after {
+body .city-display .city:after {
   content: "";
   width: 90%;
   height: 50px;
@@ -150,7 +163,7 @@ body ::placeholder {
   background: #FFFFFF;
 }
 
-.city-display .cities {
+body .city-display .cities {
   list-style: none;
   display: -ms-grid;
   display: grid;
@@ -159,11 +172,11 @@ body ::placeholder {
       grid-template-columns: repeat(4, 1fr);
 }
 
-.city-display .cities span {
+body .city-display .cities span {
   font-family: 'Open Sans';
 }
 
-.city-display .cities figcaption {
+body .city-display .cities figcaption {
   font-family: 'Open Sans';
   margin-top: 10px;
   text-transform: uppercase;
@@ -171,7 +184,7 @@ body ::placeholder {
   text-align: center;
 }
 
-.city-display .cities .city-temperature {
+body .city-display .cities .city-temperature {
   font-family: 'Open Sans';
   font-size: 5rem;
   font-weight: bold;
@@ -179,13 +192,13 @@ body ::placeholder {
   color: var(--text_dark);
 }
 
-.city-display .cities .city sup {
+body .city-display .cities .city sup {
   font-family: 'Open Sans';
   font-size: 0.5em;
   font-weight: 600;
 }
 
-.city-display .cities .city-name sup {
+body .city-display .cities .city-name sup {
   font-family: 'Open Sans';
   padding: 0.3em 0.6em;
   border-radius: 20px;
@@ -193,21 +206,21 @@ body ::placeholder {
   background: #f500e3;
 }
 
-.city-display .cities .city-icon {
+body .city-display .cities .city-icon {
   margin-top: 10px;
   width: 100px;
   height: 100px;
 }
 
 @media (max-width: 700px) {
-  .city-display .cities {
+  body .city-display .cities {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  .city-display .cities {
+  body .city-display .cities {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
