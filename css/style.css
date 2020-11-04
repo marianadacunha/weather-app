@@ -101,7 +101,7 @@ body form button {
 }
 
 body form button:hover {
-  background: #f500e3;
+  background: #dc00cb;
 }
 
 @media (max-width: 840px) {
@@ -233,7 +233,7 @@ body .city-display .cities .city-name sup {
   padding: 0.3em 0.6em;
   border-radius: 20px;
   color: #3a0ca3;
-  background: #f500e3;
+  background: #dc00cb;
 }
 
 body .city-display .cities .city-icon {
@@ -261,5 +261,25 @@ body .city-display .cities .city-icon {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
+}
+
+body .footer {
+  font-family: 'Open Sans';
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 15px 0px 10px 0px;
+}
+
+body .footer a {
+  text-decoration: none;
+  color: #ff5cf3;
+}
+
+body .footer a:hover {
+  color: #dc00cb;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

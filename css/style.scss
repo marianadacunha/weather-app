@@ -197,4 +197,23 @@ body {
       }
     }
   }
+
+  .footer {
+    font-family: 'Open Sans';
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+    color: color(text);
+    text-align: center;
+    padding: 15px 0px 10px 0px;
+
+    a {
+      text-decoration: none;
+      color: color(secondary);
+
+      &:hover {
+        color: color(secondary-dark);
+        transition: 0.15s ease-in-out;
+      }
+    }
+  }
 }
